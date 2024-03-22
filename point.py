@@ -44,36 +44,38 @@ class Point:
         """
         return self.distance_origin() == other.distance_origin()
 
-a = Point(2,3)
-b = Point(7,9)
-print(f"a=({a.x}, {a.y})")
-print(f"b=({b.x}, {b.y})")
 
-# creating a list of 5 random points
-points = [] # initialize on empty list
-for _ in range(5):
-    # x = random.randint(-100, 100)
-    # y = random.randint(-100, 100)
-    # random_point = Point(x, y)
-    # points.append(random_point)
+if __name__ == "__main__":
+    a = Point(2,3)
+    b = Point(7,9)
+    print(f"a=({a.x}, {a.y})")
+    print(f"b=({b.x}, {b.y})")
 
-    # or in a single line like this
-    points.append(Point(random.randint(-100, 100),
-                         random.randint(-100, 100)))
+    # creating a list of 5 random points
+    points = [] # initialize on empty list
+    for _ in range(5):
+        # x = random.randint(-100, 100)
+        # y = random.randint(-100, 100)
+        # random_point = Point(x, y)
+        # points.append(random_point)
 
-
-for point in points:
-    print(f"p({point.x}, {point.y})")
+        # or in a single line like this
+        points.append(Point(random.randint(-100, 100),
+                             random.randint(-100, 100)))
 
 
-# try to print the first point
-print("printing a point value:", points[0])
-print(points)
-a = Point(3, 4)
-print(f"distance origin a ={a.distance_origin()}")
-b = Point (5, 12)
-print(f"distance origin b ={b.distance_origin()}")
-print(f"a > b = {a>b}, a < b = {a < b}")
+    for point in points:
+        print(f"p({point.x}, {point.y})")
 
-points.sort()
-print(f"largest point in the list is {points[-1]}")
+
+    # try to print the first point
+    print("printing a point value:", points[0])
+    print(points)
+    a = Point(3, 4)
+    print(f"distance origin a ={a.distance_origin()}")
+    b = Point (5, 12)
+    print(f"distance origin b ={b.distance_origin()}")
+    print(f"a > b = {a>b}, a < b = {a < b}")
+
+    points.sort()
+    print(f"largest point in the list is {points[-1]}")
